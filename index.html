@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇小游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box {
+            margin: 20px auto;
+            /* border: 1px solid #ccc; */
+        }
+        .row {
+            display: flex;
+        }
+        .col {
+            flex: 1;
+            border: 1px solid #ccc;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/Block.js"></script>
+    <script src="./js/Food.js"></script>
+    <script src="./js/Map.js"></script>
+    <script src="./js/Snake.js"></script>
+    <script src="./js/Game.js"></script>
+    <script>
+    var food = new Food(6, 3, './img/food.jpg');
+    var block = new Block('./img/block.png');
+    var map = new Map(10, 10, 300, 300);
+    var snake = new Snake();
+    var game = new Game(food, block, map, snake);
+    
+    </script>
+</body>
+</html>
